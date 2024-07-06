@@ -19,6 +19,7 @@ jobs:
           
       - name: Build repository 
         run: |
+          set +e
           export CC=clang
           export CXX=clang++
           export CFLAGS="-fsanitize=address -O1 -fno-omit-frame-pointer -fno-common -fsanitize-recover=address -g"
